@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,8 @@
 
     <!-- Open Graph / Social Media Preview Tags -->
     <meta property="og:title" content="Mike Fussell | Roanoke Real Estate">
-    <meta property="og:description" content="Selling your property. Finding your next one. Whatever your goal is in the Roanoke market, I am here to execute it.">
+    <meta property="og:description"
+        content="Selling your property. Finding your next one. Whatever your goal is in the Roanoke market, I am here to execute it.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://roanokemike.com/">
     <meta property="og:image" content="https://roanokemike.com/black-tshirt.png">
@@ -15,34 +17,47 @@
     <!-- Twitter/X Card Tags (Also used by iMessage and Slack) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mike Fussell | Roanoke Real Estate">
-    <meta name="twitter:description" content="Selling your property. Finding your next one. Whatever your goal is in the Roanoke market, I am here to execute it.">
+    <meta name="twitter:description"
+        content="Selling your property. Finding your next one. Whatever your goal is in the Roanoke market, I am here to execute it.">
     <meta name="twitter:image" content="https://roanokemike.com/black-tshirt.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap');
 
         /* DEFAULT: Dark Theme */
         :root {
-            --bg-color: #040a14; /* Deep space navy/black */
-            --text-primary: #ffffff; /* Stark white */
-            --text-secondary: #8ab4f8; /* Soft ice blue */
-            --shadow-color: #02050a; /* True black shadow */
-            --border-color: #0055ff; /* Vibrant Electric Blue */
+            --bg-color: #040a14;
+            /* Deep space navy/black */
+            --text-primary: #ffffff;
+            /* Stark white */
+            --text-secondary: #8ab4f8;
+            /* Soft ice blue */
+            --shadow-color: #02050a;
+            /* True black shadow */
+            --border-color: #0055ff;
+            /* Vibrant Electric Blue */
             --success-color: #00e676;
             --error-color: #ff3d00;
-            --photo-bg: rgba(0, 85, 255, 0.25); /* Electric blue photo tint */
+            --photo-bg: rgba(0, 85, 255, 0.25);
+            /* Electric blue photo tint */
         }
 
         /* AUTOMATIC LIGHT MODE */
         @media (prefers-color-scheme: light) {
             :root {
-               --bg-color: #f0f5ff; /* Very pale icy blue */
-                --text-primary: #051024; /* Near-black navy */
-                --text-secondary: #4a6b9c; /* Muted steel blue */
-                --shadow-color: #d1e1ff; /* Light blue shadow */
-                --border-color: #0055ff; /* Vibrant Electric Blue */
-                --photo-bg: rgba(0, 85, 255, 0.15); /* Softer electric blue photo tint */
+                --bg-color: #f0f5ff;
+                /* Very pale icy blue */
+                --text-primary: #051024;
+                /* Near-black navy */
+                --text-secondary: #4a6b9c;
+                /* Muted steel blue */
+                --shadow-color: #d1e1ff;
+                /* Light blue shadow */
+                --border-color: #0055ff;
+                /* Vibrant Electric Blue */
+                --photo-bg: rgba(0, 85, 255, 0.15);
+                /* Softer electric blue photo tint */
             }
         }
 
@@ -119,10 +134,11 @@
             transition: color 0.4s ease;
         }
 
-       .cta-btn {
+        .cta-btn {
             grid-column: 1;
             justify-self: start;
-            align-self: start; /* <--- THIS PREVENTS THE VERTICAL STRETCHING */
+            align-self: start;
+            /* <--- THIS PREVENTS THE VERTICAL STRETCHING */
             display: inline-block;
             color: var(--bg-color);
             background-color: var(--text-primary);
@@ -141,7 +157,7 @@
             background-color: transparent;
             color: var(--text-primary);
         }
-        
+
         .cta-btn:disabled {
             opacity: 0.5;
             cursor: not-allowed;
@@ -149,7 +165,8 @@
 
         .image-content {
             grid-column: 2;
-            grid-row: 1 / 5; /* Spans all 4 rows on desktop */
+            grid-row: 1 / 5;
+            /* Spans all 4 rows on desktop */
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -184,7 +201,7 @@
             z-index: 0;
             pointer-events: none;
             opacity: 0.15;
-            
+
             --star-color: var(--text-primary);
             --truss-color: var(--text-secondary);
             --star-thickness: 1px;
@@ -258,7 +275,7 @@
             appearance: none;
             cursor: pointer;
         }
-        
+
         .form-group select option {
             background-color: var(--bg-color);
             color: var(--text-primary);
@@ -298,7 +315,7 @@
             border-radius: 50px;
         }
 
-        .radio-group input[type="radio"]:checked + label {
+        .radio-group input[type="radio"]:checked+label {
             background-color: var(--text-primary);
             color: var(--bg-color);
             border-color: var(--text-primary);
@@ -318,29 +335,33 @@
             font-family: 'Inter', sans-serif;
             font-weight: 400;
         }
+
         #form-status.success {
             display: block;
             border-color: var(--success-color);
             color: var(--text-primary);
         }
+
         #form-status.error {
             display: block;
             border-color: var(--error-color);
             color: var(--text-primary);
         }
 
-       /* --- FOOTER SECTION --- */
+        /* --- FOOTER SECTION --- */
         .site-footer {
             padding: 3rem 0;
-            border-top: 1px solid var(--border-color); /* Matches your Electric Blue theme */
+            border-top: 1px solid var(--border-color);
+            /* Matches your Electric Blue theme */
             margin-top: 2rem;
             z-index: 2;
             position: relative;
-            
+
             /* Mobile Layout Default (Stacked) */
             display: flex;
             flex-direction: column;
-            gap: 2rem; /* Space between text and logos on small screens */
+            gap: 2rem;
+            /* Space between text and logos on small screens */
         }
 
         .site-footer .broker-info {
@@ -356,12 +377,14 @@
         .footer-logos {
             display: flex;
             align-items: center;
-            gap: 1.5rem; /* Space between the two logos */
+            gap: 1.5rem;
+            /* Space between the two logos */
         }
 
         /* Keep logos sized appropriately and responsive */
         .footer-logo {
-            max-height: 40px; /* Prevents giant logos */
+            max-height: 40px;
+            /* Prevents giant logos */
             width: auto;
             object-fit: contain;
         }
@@ -378,14 +401,16 @@
             justify-self: start;
             align-self: start;
             /* Space between this info and the button */
-            margin-bottom: 1.5rem; 
+            margin-bottom: 1.5rem;
         }
 
         /* The containing box for the text */
         .broker-card {
-            border: 1px solid var(--border-color); /* Electric Blue */
+            border: 1px solid var(--border-color);
+            /* Electric Blue */
             padding: 1rem 1.5rem;
-            background-color: var(--bg-color); /* Match page bg in normal state */
+            background-color: var(--bg-color);
+            /* Match page bg in normal state */
             display: flex;
             flex-direction: column;
             gap: 2px;
@@ -394,13 +419,16 @@
 
         /* HOVER STATE: Invert colors and add brutalist shadow */
         .broker-card-link:hover .broker-card {
-            background-color: var(--border-color); /* Fills with Electric Blue */
-            box-shadow: 10px 10px 0px var(--shadow-color); /* Blue shadow on light mode, dark shadow on dark mode */
+            background-color: var(--border-color);
+            /* Fills with Electric Blue */
+            box-shadow: 10px 10px 0px var(--shadow-color);
+            /* Blue shadow on light mode, dark shadow on dark mode */
         }
 
         /* The main Broker Name text */
         .broker-name {
-            font-family: 'Syncopate', sans-serif; /* Brutalist wide font */
+            font-family: 'Syncopate', sans-serif;
+            /* Brutalist wide font */
             font-weight: 700;
             font-size: 0.9rem;
             text-transform: uppercase;
@@ -411,24 +439,29 @@
 
         /* The secondary Broker Group text */
         .broker-group {
-            font-family: 'Inter', sans-serif; /* Body font */
+            font-family: 'Inter', sans-serif;
+            /* Body font */
             font-weight: 400;
             font-size: 0.85rem;
-            color: var(--text-secondary); /* Muted in normal state */
+            color: var(--text-secondary);
+            /* Muted in normal state */
             transition: color 0.3s ease;
         }
 
         /* Force text colors to change when the parent card turns blue */
         .broker-card-link:hover .broker-name {
-            color: #ffffff; /* Stark white text against blue bg */
+            color: #ffffff;
+            /* Stark white text against blue bg */
         }
+
         .broker-card-link:hover .broker-group {
-            color: rgba(255, 255, 255, 0.8); /* Faded white text against blue bg */
+            color: rgba(255, 255, 255, 0.8);
+            /* Faded white text against blue bg */
         }
 
         .eh-logo {
             /* Fills the shape with your muted secondary text color */
-            fill: var(--text-secondary); 
+            fill: var(--text-secondary);
             transition: fill 0.3s ease;
         }
 
@@ -441,14 +474,17 @@
         .eh-logo-wrapper {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Keeps the text centered under the peak of the roof */
+            align-items: center;
+            /* Keeps the text centered under the peak of the roof */
             justify-content: center;
-            gap: 4px; /* Tiny space between the house and the text */
+            gap: 4px;
+            /* Tiny space between the house and the text */
         }
 
         .eh-text {
             font-family: 'Inter', sans-serif;
-            font-size: 0.45rem; /* Extremely small text */
+            font-size: 0.45rem;
+            /* Extremely small text */
             font-weight: 600;
             color: var(--text-secondary);
             text-align: center;
@@ -461,6 +497,7 @@
         .eh-logo-wrapper:hover .eh-logo {
             fill: var(--text-primary);
         }
+
         .eh-logo-wrapper:hover .eh-text {
             color: var(--text-primary);
         }
@@ -468,50 +505,60 @@
         /* --- UPDATED MOBILE LAYOUT --- */
         @media (max-width: 900px) {
             .hero {
-                grid-template-columns: auto 1fr; /* Image width, then text fills the rest */
+                grid-template-columns: auto 1fr;
+                /* Image width, then text fills the rest */
                 grid-template-columns: fit-content(150px) 1fr;
                 grid-template-rows: auto auto auto auto;
                 padding-top: 2rem;
                 align-content: start;
                 gap: 1rem 1.5rem;
             }
+
             .image-content {
                 grid-column: 1;
-                grid-row: 1 / 3; /* Spans height of badge and h1 */
+                grid-row: 1 / 3;
+                /* Spans height of badge and h1 */
                 justify-content: start;
                 align-items: start;
             }
+
             .profile-photo {
-                width: 140px; /* Locked smaller size for mobile */
+                width: 140px;
+                /* Locked smaller size for mobile */
                 height: 180px;
                 box-shadow: 8px 8px 0px var(--shadow-color);
             }
+
             .title-badge {
                 grid-column: 2;
                 grid-row: 1;
                 align-self: end;
-                
+
                 /* Forces the text to NEVER wrap to a second line */
-                white-space: nowrap; 
-                
+                white-space: nowrap;
+
                 /* Dynamically shrinks the text on tiny screens, caps at 0.75rem */
-                font-size: clamp(0.5rem, 3.5vw, 0.75rem); 
-                
+                font-size: clamp(0.5rem, 3.5vw, 0.75rem);
+
                 /* Tighter padding so the bubble fits in the limited space */
-                padding: 0.3rem 0.75rem; 
+                padding: 0.3rem 0.75rem;
             }
+
             h1 {
                 grid-column: 2;
                 grid-row: 2;
                 font-size: clamp(2rem, 8vw, 3rem);
                 align-self: start;
             }
+
             p {
-                grid-column: 1 / 3; /* Spans across below both photo and text */
+                grid-column: 1 / 3;
+                /* Spans across below both photo and text */
                 grid-row: 3;
                 text-align: left;
                 margin-top: 1rem;
             }
+
             .cta-btn {
                 grid-column: 1 / 3;
                 grid-row: 4;
@@ -534,13 +581,15 @@
                 border: none;
                 padding: 0;
                 background-color: transparent;
-                flex-direction: row; /* Forces text onto a single line */
+                flex-direction: row;
+                /* Forces text onto a single line */
                 flex-wrap: wrap;
-                gap: 6px; /* Space between Mac Westland and Real Estate Group */
+                gap: 6px;
+                /* Space between Mac Westland and Real Estate Group */
             }
 
             /* Unify the text size for the single line */
-            .broker-name, 
+            .broker-name,
             .broker-group {
                 font-size: 0.75rem;
                 align-self: center;
@@ -551,104 +600,110 @@
                 background-color: transparent;
                 box-shadow: none;
             }
-            
+
             /* Prevent the text from turning white against a transparent background on hover */
             .broker-card-link:hover .broker-name {
                 color: var(--text-primary);
             }
+
             .broker-card-link:hover .broker-group {
-                color: var(--text-primary); /* Brightens the group text slightly on tap */
+                color: var(--text-primary);
+                /* Brightens the group text slightly on tap */
             }
         }
     </style>
 </head>
-<body>
-    
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="roanoke-star-vector">
-  <style>
-    .roanoke-star-vector {
-      width: 100%;
-      height: 100%;
-      --star-color: #ffffff;
-      --star-thickness: 1.2px;
-    }
-    
-    @media (prefers-color-scheme: light) {
-      .roanoke-star-vector {
-        --star-color: #050505;
-      }
-    }
-    
-    /* Applies the sweeping light gradient to all shapes */
-    .lit-path {
-      fill: none;
-      stroke: url(#light-sweep); 
-      stroke-linejoin: miter;
-      stroke-miterlimit: 4;
-    }
-    
-    .star-ring {
-      stroke-width: var(--star-thickness);
-    }
-    
-    .star-truss {
-      stroke-width: 0.4px;
-    }
-  </style>
 
-  <defs>
-    <linearGradient id="light-sweep" gradientUnits="userSpaceOnUse" x1="-100" y1="-100" x2="0" y2="0">
-      
-      <!-- Changed dur="5s" to dur="12s" to slow down the light sweep -->
-      <animate attributeName="x1" values="-100; 200" dur="6s" repeatCount="indefinite" />
-      <animate attributeName="y1" values="-100; 200" dur="6s" repeatCount="indefinite" />
-      <animate attributeName="x2" values="0; 300" dur="6s" repeatCount="indefinite" />
-      <animate attributeName="y2" values="0; 300" dur="6s" repeatCount="indefinite" />
-      
-      <!-- The faint background state (15% opacity) -->
-      <stop offset="0%" stop-color="var(--star-color)" stop-opacity="0.15" />
-      <stop offset="45%" stop-color="var(--star-color)" stop-opacity="0.15" />
-      
-      <!-- The bright light beam passing over (100% opacity) -->
-      <stop offset="50%" stop-color="var(--star-color)" stop-opacity="1" />
-      
-      <!-- Instantly fading back to the faint background state -->
-      <stop offset="55%" stop-color="var(--star-color)" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="var(--star-color)" stop-opacity="0.15" />
-    </linearGradient>
-  </defs>
-  
-  <!-- Structural Connections (Trusses) -->
-  <g class="lit-path star-truss">
-        <line x1="50.00" y1="2.00" x2="50.00" y2="30.00" />
-        <line x1="61.46" y1="34.22" x2="54.76" y2="43.45" />
-        <line x1="95.65" y1="35.17" x2="69.02" y2="43.82" />
-        <line x1="68.55" y1="56.03" x2="57.70" y2="52.50" />
-        <line x1="78.21" y1="88.83" x2="61.76" y2="66.18" />
-        <line x1="50.00" y1="69.50" x2="50.00" y2="58.10" />
-        <line x1="21.79" y1="88.83" x2="38.24" y2="66.18" />
-        <line x1="31.45" y1="56.03" x2="42.30" y2="52.50" />
-        <line x1="4.35" y1="35.17" x2="30.98" y2="43.82" />
-        <line x1="38.54" y1="34.22" x2="45.24" y2="43.45" />
-  </g>
-  
-  <!-- The Three Iconic Rings -->
-  <g class="lit-path star-ring">
-      <polygon class="outer" points="50.00,2.00 61.46,34.22 95.65,35.17 68.55,56.03 78.21,88.83 50.00,69.50 21.79,88.83 31.45,56.03 4.35,35.17 38.54,34.22" />
-      <polygon class="middle" points="50.00,16.00 58.11,38.84 82.34,39.49 63.12,54.26 69.98,77.51 50.00,63.80 30.02,77.51 36.88,54.26 17.66,39.49 41.89,38.84" />
-      <polygon class="inner" points="50.00,30.00 54.76,43.45 69.02,43.82 57.70,52.50 61.76,66.18 50.00,58.10 38.24,66.18 42.30,52.50 30.98,43.82 45.24,43.45" />
-  </g>
-</svg>
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="roanoke-star-vector">
+        <style>
+            .roanoke-star-vector {
+                width: 100%;
+                height: 100%;
+                --star-color: #ffffff;
+                --star-thickness: 1.2px;
+            }
+
+            @media (prefers-color-scheme: light) {
+                .roanoke-star-vector {
+                    --star-color: #050505;
+                }
+            }
+
+            /* Applies the sweeping light gradient to all shapes */
+            .lit-path {
+                fill: none;
+                stroke: url(#light-sweep);
+                stroke-linejoin: miter;
+                stroke-miterlimit: 4;
+            }
+
+            .star-ring {
+                stroke-width: var(--star-thickness);
+            }
+
+            .star-truss {
+                stroke-width: 0.4px;
+            }
+        </style>
+
+        <defs>
+            <linearGradient id="light-sweep" gradientUnits="userSpaceOnUse" x1="-100" y1="-100" x2="0" y2="0">
+
+                <!-- Changed dur="5s" to dur="12s" to slow down the light sweep -->
+                <animate attributeName="x1" values="-100; 200" dur="6s" repeatCount="indefinite" />
+                <animate attributeName="y1" values="-100; 200" dur="6s" repeatCount="indefinite" />
+                <animate attributeName="x2" values="0; 300" dur="6s" repeatCount="indefinite" />
+                <animate attributeName="y2" values="0; 300" dur="6s" repeatCount="indefinite" />
+
+                <!-- The faint background state (15% opacity) -->
+                <stop offset="0%" stop-color="var(--star-color)" stop-opacity="0.15" />
+                <stop offset="45%" stop-color="var(--star-color)" stop-opacity="0.15" />
+
+                <!-- The bright light beam passing over (100% opacity) -->
+                <stop offset="50%" stop-color="var(--star-color)" stop-opacity="1" />
+
+                <!-- Instantly fading back to the faint background state -->
+                <stop offset="55%" stop-color="var(--star-color)" stop-opacity="0.15" />
+                <stop offset="100%" stop-color="var(--star-color)" stop-opacity="0.15" />
+            </linearGradient>
+        </defs>
+
+        <!-- Structural Connections (Trusses) -->
+        <g class="lit-path star-truss">
+            <line x1="50.00" y1="2.00" x2="50.00" y2="30.00" />
+            <line x1="61.46" y1="34.22" x2="54.76" y2="43.45" />
+            <line x1="95.65" y1="35.17" x2="69.02" y2="43.82" />
+            <line x1="68.55" y1="56.03" x2="57.70" y2="52.50" />
+            <line x1="78.21" y1="88.83" x2="61.76" y2="66.18" />
+            <line x1="50.00" y1="69.50" x2="50.00" y2="58.10" />
+            <line x1="21.79" y1="88.83" x2="38.24" y2="66.18" />
+            <line x1="31.45" y1="56.03" x2="42.30" y2="52.50" />
+            <line x1="4.35" y1="35.17" x2="30.98" y2="43.82" />
+            <line x1="38.54" y1="34.22" x2="45.24" y2="43.45" />
+        </g>
+
+        <!-- The Three Iconic Rings -->
+        <g class="lit-path star-ring">
+            <polygon class="outer"
+                points="50.00,2.00 61.46,34.22 95.65,35.17 68.55,56.03 78.21,88.83 50.00,69.50 21.79,88.83 31.45,56.03 4.35,35.17 38.54,34.22" />
+            <polygon class="middle"
+                points="50.00,16.00 58.11,38.84 82.34,39.49 63.12,54.26 69.98,77.51 50.00,63.80 30.02,77.51 36.88,54.26 17.66,39.49 41.89,38.84" />
+            <polygon class="inner"
+                points="50.00,30.00 54.76,43.45 69.02,43.82 57.70,52.50 61.76,66.18 50.00,58.10 38.24,66.18 42.30,52.50 30.98,43.82 45.24,43.45" />
+        </g>
+    </svg>
 
     <div class="container">
         <!-- Hero Section without the text-content wrapper -->
         <main class="hero">
             <div class="title-badge">REALTOR&reg;</div>
-            
+
             <h1>Mike<br>Fussell</h1>
-            
+
             <p>Buying or selling in the Roanoke area? Let's discuss your next move.<br>
-              Call or text (540) 254-0707
+                Call or text (540) 254-0707
             </p>
 
             <a href="https://westlandsells.com/" target="_blank" rel="noopener" class="broker-card-link">
@@ -657,20 +712,20 @@
                     <span class="broker-group">Real Estate Group</span>
                 </div>
             </a>
-            
+
             <a href="#inquire" class="cta-btn">Connect</a>
-            
+
             <div class="image-content">
-                <img src="black-tshirt.png" alt="Mike Fussell - Realtor" class="profile-photo">
+                <img src="me-hat.jpg" alt="Mike Fussell - Realtor" class="profile-photo">
             </div>
         </main>
 
         <!-- Professional Contact Section -->
         <section class="contact-section" id="inquire">
             <h2>Start a<br>Conversation</h2>
-            
+
             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                
+
                 <input type="hidden" name="access_key" value="a72c1de7-efed-4c04-a45d-d6cb886829d6">
                 <input type="hidden" name="subject" value="New Real Estate Inquiry from Website">
 
@@ -695,10 +750,10 @@
                     <div class="radio-group">
                         <input type="radio" id="buy" name="interest" value="Buy" checked>
                         <label for="buy">Buying</label>
-                        
+
                         <input type="radio" id="sell" name="interest" value="Sell">
                         <label for="sell">Selling</label>
-                        
+
                         <input type="radio" id="invest" name="interest" value="Invest">
                         <label for="invest">Investing</label>
                     </div>
@@ -717,13 +772,14 @@
 
                 <div class="form-group">
                     <label for="message">Additional Details</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your ideal property or current home..." required></textarea>
+                    <textarea id="message" name="message"
+                        placeholder="Tell me about your ideal property or current home..." required></textarea>
                 </div>
 
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                 <button type="submit" id="submit-button" class="cta-btn">Submit Inquiry</button>
-                
+
                 <!-- Status Message Display -->
                 <div id="form-status"></div>
             </form>
@@ -737,18 +793,20 @@
                 Office: (540) 312-9202<br>
                 1636 Apperson Dr, Salem VA
             </div>
-            
+
             <!-- NEW: Footer Logos -->
             <div class="footer-logos">
                 <!-- Keep your Mac Westland image (unless you have an SVG for that too!) -->
                 <a href="https://westlandsells.com/" target="_blank">
-                  <img src="mw-logo.png" alt="Mac Westland Real Estate" class="footer-logo mw-logo">
+                    <img src="mw-logo.png" alt="Mac Westland Real Estate" class="footer-logo mw-logo">
                 </a>
-                
+
                 <!-- NEW: Grouped Equal Housing Logo & Text -->
                 <div class="eh-logo-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="footer-logo eh-logo" aria-label="Equal Housing Opportunity">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M50 5 L5 50 H15 V95 H85 V50 H95 Z M30 45 H70 V55 H30 Z M30 65 H70 V75 H30 Z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="footer-logo eh-logo"
+                        aria-label="Equal Housing Opportunity">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M50 5 L5 50 H15 V95 H85 V50 H95 Z M30 45 H70 V55 H30 Z M30 65 H70 V75 H30 Z" />
                     </svg>
                     <div class="eh-text">EQUAL HOUSING<br>OPPORTUNITY</div>
                 </div>
@@ -763,9 +821,9 @@
         const result = document.getElementById('form-status');
         const submitBtn = document.getElementById('submit-button');
 
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const originalBtnText = submitBtn.innerText;
             submitBtn.innerText = "Sending...";
             submitBtn.disabled = true;
@@ -775,13 +833,13 @@
             const json = JSON.stringify(object);
 
             fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
-                })
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
                 .then(async (response) => {
                     let json = await response.json();
                     if (response.status == 200) {
@@ -799,7 +857,7 @@
                     result.innerHTML = "Something went wrong! Please try again later.";
                     result.className = "error";
                 })
-                .then(function() {
+                .then(function () {
                     submitBtn.innerText = originalBtnText;
                     submitBtn.disabled = false;
                     setTimeout(() => {
@@ -811,13 +869,13 @@
 
         window.addEventListener('scroll', () => {
             const photo = document.querySelector('.profile-photo');
-            
+
             // If the photo exists on the page
             if (photo) {
                 // If the user scrolls down more than 5 pixels
                 if (window.scrollY > 5) {
                     // Turn off grayscale and return contrast to normal
-                    photo.style.filter = 'grayscale(0%) contrast(100%)'; 
+                    photo.style.filter = 'grayscale(0%) contrast(100%)';
                 } else {
                     // If they scroll back to the absolute top, make it black and white again
                     photo.style.filter = 'grayscale(100%) contrast(120%)';
@@ -826,4 +884,5 @@
         });
     </script>
 </body>
+
 </html>
