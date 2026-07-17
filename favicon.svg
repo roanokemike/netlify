@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Main Peak -->
+  <path d="M2 27 L16 4 L30 27" fill="none" stroke="#0055ff" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter" />
+  <!-- Intersecting Offset Peak -->
+  <path d="M11 27 L20 12 L29 25" fill="none" stroke="#0055ff" stroke-width="3.5" stroke-linecap="square" stroke-linejoin="miter" />
+</svg>
